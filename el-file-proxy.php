@@ -28,3 +28,7 @@ require_once plugin_dir_path(__FILE__) . 'includes/ElFileProxy.php';
 
 $elFileProxy = new ElFileProxy();
 $elFileProxy->run();
+
+require_once plugin_dir_path(__FILE__) . 'includes/ElFileProxyAdmin.php';
+$elFileProxyAdmin = new ElFileProxyAdmin();
+$elFileProxyAdmin->initHooks();
