@@ -44,7 +44,11 @@ class ElFileProxy
 
     public function doProxy()
     {
-        $this->returnFile(get_query_var('el_file'));
+        $elFile = get_query_var('el_file');
+        if(empty($elFile)){
+            return;
+        }
+        $this->returnFile($elFile);
     }
 
     public function addCustomVar($vars)
